@@ -204,12 +204,14 @@ _可使用工具：[CSS Compressor] 并选择\[highest\]压缩_
 ###JS 细化规范：
 ----
 
-文件结构：
+#####文件结构：
 >
     ---
-     |---- plugins.js             加载jQ插件的文件 
-     |---- script.js              单独书写的js
-     |---- juqery-1.8.x.min.js    调用jq库文件  
+    |---- /mylib/plugin-1/       使用到的js插件1  
+    |---- /mylib/plugin-2/       使用到的js插件2  
+    |---- /mylib/plugin-3/       使用到的js插件3  
+    |---- script.js              单独书写的js  
+    |---- juqery-1.8.x.min.js    调用jq库文件  
 
 * 结束行需添加分号`;`
 * jQuery变量要求首字符为 `$`, 私有变量:首字符为`_`; 尽量避免全局变量.
@@ -243,4 +245,4 @@ _可使用工具：[CSS Compressor] 并选择\[highest\]压缩_
 [匈牙利命名法]: http://zh.wikipedia.org/wiki/%E5%8C%88%E7%89%99%E5%88%A9%E5%91%BD%E5%90%8D%E6%B3%95 "Wiki:匈牙利命名法"
 [小駝峰式命名法]:http://zh.wikipedia.org/wiki/%E9%A7%9D%E5%B3%B0%E5%BC%8F%E5%A4%A7%E5%B0%8F%E5%AF%AB "小駝峰式命名法"
 [CSS Compressor]: http://www.csscompressor.com/ "CSS 压缩"
-[HTML 4.01 符号实体]: http://www.w3school.com.cn/tags/html_ref_symbols.html 
+[HTML 符号实体]: http://www.w3school.com.cn/html/html_entities.asp 
