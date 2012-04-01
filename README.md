@@ -130,6 +130,12 @@ _可使用工具：[CSS Compressor] 并选择\[highest\]压缩_
     @require: base.css
     @author: Andy Huang(andyahung@geekpark.net)
     -->
+    
+    <div id="header">
+        <div class="xxx">
+            <span>HTML行内注释格式</span>
+        </div>
+    </div><!-- #header end-->
 
 * HTML换行缩进：采用 2 空格
 
@@ -160,13 +166,42 @@ _可使用工具：[CSS Compressor] 并选择\[highest\]压缩_
         <li...
     </ul>
 
-* 第一行统一使用：<!DOCTYPE html>
+##### \* 第一行统一使用：<!DOCTYPE html>
+    <!DOCTYPE html>
+    <html dir="ltr" lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <title>极客公园 | 创新者社区</title>
+        <meta name="keywords" content="xxxx, xxx, xxxxx">
+        <meta name="description" content="xxxxxxxxxxxxxxxxxxxx">
+        
+
+##### Meta 的使用：（需呀根据具体需求按需选择）
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="max-age=7200" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://feeds.geekpark.net/" />
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    
+    <script type='text/javascript' src='/js/xxx.js'></script>
+    <link rel="stylesheet" href="/css/xxx.css">
+    
+    <script type="text/javascript">
+        Google 统计代码 的位置在离</head>最近的位置
+	</script>
+    </head>
+
 * \<img\>标签默认缺省格式：\<img src="xxx.png" alt="缺省时文字" />
 * \<a\>标签缺省格式：\<a href="#" title="链接名称">xxx\</> 注：target="_blank" 根据需求决定  
-* 整理排版中，待发  
+*   
 
 ###JS 细化规范：
+<<<<<<< HEAD
 * jQuery变量要求首字符为 '$', 私有变量:首字符为：'_'; 要求变量集中声明, 避免全局变量.
+=======
+----
+>>>>>>> update head meta
 * 整理排版中，待发  
 
 ###Newletter制作规范：
