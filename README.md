@@ -77,7 +77,7 @@ _其中，@require为可选项目_
         * 最优压缩，省略一切可以省略的空格，字体名用`\`包含，中文需转义。  
         如：`.box1,.box2,.box3{font-family:Courier,'Courier New';}`
         
-#### CSS各熟悉的排列顺序：不做硬性要求  
+#### CSS各属性的排列顺序：不做硬性要求  
 _如：以下2种顺序均可_
 
     .box{
@@ -105,7 +105,6 @@ _如：以下2种顺序均可_
     .ui-nav .ui-list{...}
     .ui-table .ui-list{...}
 
-
     /* 不推荐 */
     .ui-icon-rarr{background:...}
     .ui-icon-larr{background:...}
@@ -116,7 +115,7 @@ _如：以下2种顺序均可_
 #### CSS格式化：最终网站上输出的CSS，每个选择器单行，最优压缩，保留注释  
 
     /* 注释内容 */
-    .box{z-index:33;width:22px;bottom:11px;background:transparent none repeat scroll 0 0 ;position: relative;}
+    .box{z-index:33;width:22px;bottom:11px;background:transparent none repeat scroll 0 0 ;position:relative;}
     .box2{z-index:44;width:55px;}
     .box3,#box4{z-index:66;width:77px;}
 _可使用工具：[CSS Compressor] 并选择\[highest\]压缩_  
@@ -170,10 +169,10 @@ _可使用工具：[CSS Compressor] 并选择\[highest\]压缩_
     <!DOCTYPE html>
     <html dir="ltr" lang="zh-CN">
     <head>
-        <meta charset="utf-8">
+        <meta charset="utf-8" />
         <title>极客公园 | 创新者社区</title>
-        <meta name="keywords" content="xxxx, xxx, xxxxx">
-        <meta name="description" content="xxxxxxxxxxxxxxxxxxxx">
+        <meta name="keywords" content="xxxx, xxx, xxxxx" />
+        <meta name="description" content="xxxxxxxxxxxxxxxxxxxx" />
         
 
 ##### Meta 的使用：（需呀根据具体需求按需选择）
@@ -197,9 +196,9 @@ _可使用工具：[CSS Compressor] 并选择\[highest\]压缩_
 * 所有标签需要符合XHTML标准
 * 一律统一标签结尾斜杠的书写形式：`<br />` `<hr />` 注意之间空格
 * 避免使用已过时标签，如：`<b>` `<u>` `<i>` 而是用 `<strong>` `<em>`等代替
-* 使用`data-xxx`来添加自定义数据，如：`<input data-xxx="yyy"/>`
+* [待讨论]使用`data-xxx`来添加自定义数据，如：`<input data-xxx="yyy"/>`
 * 避免使用`style="xxx:xxx"`的内联样式表
-* 特殊符号使用参考[HTML 4.01 符号实体]
+* 特殊符号使用参考[HTML 符号实体]
 
 ###JS 细化规范：
 ----
