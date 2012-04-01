@@ -23,51 +23,50 @@
 
 ## 书写规范
 ----
-###样式与内容分离
+### 样式与内容分离
 
-* 文件结构： 
-```
+#### 文件结构： 
+>
     ---
      |---- images/                存放CSS文件中使用到的 image 图片  
      |---- js/                    调用js文件  
      |---- base.css               CSS reset 文件  
      |---- style.css              样式表  
      |---- index.html             内容文件  
-```
-* 重构步骤约定：
-    1. index.html 全部样式附着于 class="xxx" **注：** _此时文    件中不包含任何一个 id="xxx"_
-    2. 为上一步书写 CSS style  
-    **\[至此重构完成\]**
-    3. 开始书写js交互文件，使用 ID 和 Class 定位被操作句柄
-    4. 向 index.html 中需要的地方添加 id="xxx"  
-    **\[至此交互效果完成\]**
-    
-* 命名规范：  
-    * 文件及文件夹: 全部英文小写字母+数字或连接符"\- , \_ "，不可出现中文等字符。  
-    如：../geekevent/css/style.css, jquery.1.x.x.js 
-    * ID: [匈牙利命名法] & [小駝峰式命名法]  
-    如：firstName, topBoxList, footerCopyright
-    * Class: [减号连接符]  
-    如：top-item, main-box, box-list-item-1
-    
-* 格式&编码：
-    * 文本文件： .xxx UTF-8_\(无BOM\)_ 编码
-    * 透明图片： .png _(PNG-24)_
-    * 动态图片： .gif
-    * 打包文件： .zip
-    
-###CSS 细化规范
 
-* CSS 注释格式约定  
+#### 重构步骤约定：
+1. index.html 全部样式附着于 class="xxx" **注：** _此时文    件中不包含任何一个 id="xxx"_
+2. 为上一步书写 CSS style  
+**\[至此重构完成\]**
+3. 开始书写js交互文件，使用 ID 和 Class 定位被操作句柄
+4. 向 index.html 中需要的地方添加 id="xxx"  
+**\[至此交互效果完成\]**
+
+#### 命名规范：  
+* 文件及文件夹: 全部英文小写字母+数字或连接符"\- , \_ "，不可出现中文等字符。  
+如：../geekevent/css/style.css, jquery.1.x.x.js 
+* ID: [匈牙利命名法] & [小駝峰式命名法]  
+如：firstName, topBoxList, footerCopyright
+* Class: [减号连接符]  
+如：top-item, main-box, box-list-item-1
+
+#### 格式&编码：
+* 文本文件： .xxx UTF-8_\(无BOM\)_ 编码
+* 透明图片： .png _(PNG-24)_
+* 动态图片： .gif
+* 打包文件： .zip
+
+### CSS 细化规范
+
+#### CSS 注释格式约定  
 >
-```
-/*
-@name: Drop Down Menu
-@description: Style of top bar drop down menu.
-@require: base.css
-@author: Andy Huang(andyahung@geekpark.net)
-*/
-```
+    /*
+    @name: Drop Down Menu
+    @description: Style of top bar drop down menu.
+    @require: base.css
+    @author: Andy Huang(andyahung@geekpark.net)
+    */
+
 _其中，@require为可选项目_ 
 
 * CSS换行制表：使用 4 个空格，而非\[tab\]
@@ -75,108 +74,91 @@ _其中，@require为可选项目_
     * 书写格式：
         * CSS名称+冒号+属性  
         如：.box1{float:left;}
-        * 如多个class一起，需要再第一个后的","号后加一个空格  
+        * 最优压缩，省略一切可以省略的空格，字体名用\'\'包含，中文需转义。  
         如：.box1,.box2,.box3{font-family:Courier,'Courier New';}
         
-    * CSS各熟悉的排列顺序：不做硬性要求  
-    _如：以下2种顺序均可_
-    >
-```
-.box{
-    /* 顺序1 */
-    background: none repeat scroll 0 0 transparent;
-    bottom: 11px;
-    position: relative;
-    width: 22px;
-    z-index: 33;
-}
-```
-    >
-```
-.box{
-    /* 顺序2 */
-    z-index: 33;
-    width: 22px;
-    bottom: 11px;
-    background: transparent none repeat scroll 0 0 ;
-    position: relative;
-}
-```
+#### CSS各熟悉的排列顺序：不做硬性要求  
+_如：以下2种顺序均可_
+
+    .box{
+        /* 顺序1 */
+        background: none repeat scroll 0 0 transparent;
+        bottom: 11px;
+        position: relative;
+        width: 22px;
+        z-index: 33;
+    }
+    .box{
+        /* 顺序2 */
+        z-index: 33;
+        width: 22px;
+        bottom: 11px;
+        background: transparent none repeat scroll 0 0 ;
+        position: relative;
+    }
   
-    * 切记业界书写准则：HTML不要相互嵌套，CSS 推荐嵌套。  
-    >
-```
-/* 推荐嵌套层级 */
-.ui-icon-rarr{background:...}
-.ui-icon-larr{background:...}
-.ui-title{font-size:...}
-.ui-nav .ui-list{...}
-.ui-table .ui-list{...}
-```
-    >
-```
-/* 不推荐 */
-.ui-icon-rarr{background:...}
-.ui-icon-larr{background:...}
-.ui-title{font-size:...}
-.ui-list{}
-.ui-nav{}
-```
-    * CSS格式化：最终网站上输出的CSS，每个选择器单行，最优压缩，保留注释  
-    >
-```
-/* 注释内容 */
-.box{z-index:33;width:22px;bottom:11px;background:transparent none repeat scroll 0 0 ;position: relative;}
-.box2{z-index:44;width:55px;}
-.box3,#box4{z-index:66;width:77px;}
-```
-    _可使用工具：[CSS Compressor] 并选择\[highest\]压缩_  
+#### 切记业界书写准则：HTML不要相互嵌套，CSS 推荐嵌套。  
+    /* 推荐嵌套层级 */
+    .ui-icon-rarr{background:...}
+    .ui-icon-larr{background:...}
+    .ui-title{font-size:...}
+    .ui-nav .ui-list{...}
+    .ui-table .ui-list{...}
+
+
+    /* 不推荐 */
+    .ui-icon-rarr{background:...}
+    .ui-icon-larr{background:...}
+    .ui-title{font-size:...}
+    .ui-list{}
+    .ui-nav{}
+
+#### CSS格式化：最终网站上输出的CSS，每个选择器单行，最优压缩，保留注释  
+
+    /* 注释内容 */
+    .box{z-index:33;width:22px;bottom:11px;background:transparent none repeat scroll 0 0 ;position: relative;}
+    .box2{z-index:44;width:55px;}
+    .box3,#box4{z-index:66;width:77px;}
+_可使用工具：[CSS Compressor] 并选择\[highest\]压缩_  
     
 ###XHTML 细化规范：
 
-* HTML 注释格式约定  
-    >
-```
- <!--
-@name: Drop Down Menu
-@description: Style of top bar drop down menu.
-@require: base.css
-@author: Andy Huang(andyahung@geekpark.net)
--->
-```
+#### HTML 注释格式约定  
+    <!--
+    @name: Drop Down Menu
+    @description: Style of top bar drop down menu.
+    @require: base.css
+    @author: Andy Huang(andyahung@geekpark.net)
+    -->
+
 * HTML换行缩进：采用 2 空格
 
-* 切记业界书写准则：HTML不要相互嵌套，CSS 推荐嵌套。  
-    >
-```
-/* 推荐嵌套层级 */
-  <ul class="ui-nav">
-    <li class="ui-nav-item"> some text
-        <ul class="ui-nav-item-child">
-            <li> some text
-                <ul class="ui-list">
-                    <li class="ui-list-item"> some text</li>
-                </ul...
-        </ul>
-    </li>
-    <li...
-</ul>
-```
-    >
-```
-/* 不推荐 */
-  <ul class="ui-nav">
-    <li class="ui-nav-item"> some text
-        <ul class="ui-nav-item-child">
-            <li> some text
-                <ul class="ui-nav">
-                    <li class="ui-nav-item"> some text </li>
-                </ul...
-        </ul>
-    </li>
-    <li...
-</ul>
-```
+#### 切记业界书写准则：HTML不要相互嵌套，CSS 推荐嵌套。  
+    /* 推荐嵌套层级 */
+      <ul class="ui-nav">
+        <li class="ui-nav-item"> some text
+            <ul class="ui-nav-item-child">
+                <li> some text
+                    <ul class="ui-list">
+                        <li class="ui-list-item"> some text</li>
+                    </ul...
+            </ul>
+        </li>
+        <li...
+    </ul>
+
+    /* 不推荐 */
+      <ul class="ui-nav">
+        <li class="ui-nav-item"> some text
+            <ul class="ui-nav-item-child">
+                <li> some text
+                    <ul class="ui-nav">
+                        <li class="ui-nav-item"> some text </li>
+                    </ul...
+            </ul>
+        </li>
+        <li...
+    </ul>
 
 * 第一行统一使用：<!DOCTYPE html>
 * \<img\>标签默认缺省格式：\<img src="xxx.png" alt="缺省时文字" />
