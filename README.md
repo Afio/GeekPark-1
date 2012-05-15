@@ -219,6 +219,14 @@ _可使用工具：[CSS Compressor] 并选择\[highest\]压缩_
 * JS调试使用`console.log()`进行，避免使用弹出框，线上版不能要注释掉所有的调试代码
 * JS压缩混淆工具: [JS Compressor]  如果使用了压缩，需要留 `name-src.js`在同路径供今后修改使用
 
+#####jQuery Plugin：
+
+* IE对HTML5标签支持，以及浏览器特性检测：[Modernizr] & [html5shiv]
+* 定制&统一 浏览器的滚动条样式：[jquery-scroll] & [Lionbars]
+* hover提示效果文字：[bootstrap-tooltips]
+* 滚动条跟随nav效果：[bootstrap-scrollspy]
+* 
+
 ### Newletter制作规范：
 * 整理排版中，待发
 
@@ -248,3 +256,10 @@ _可使用工具：[CSS Compressor] 并选择\[highest\]压缩_
 [CSS Compressor]: http://www.csscompressor.com/ "CSS 压缩"
 [JS Compressor]: http://javascriptcompressor.com/ "JS 压缩和混淆"
 [HTML 符号实体]: http://www.w3school.com.cn/html/html_entities.asp 
+
+[Modernizr]: http://modernizr.com/download/
+[html5shiv]: https://github.com/aFarkas/html5shiv
+[jquery-scroll]: https://github.com/thomd/jquery-scroll/
+[Lionbars]: ##
+[bootstrap-tooltips]: http://twitter.github.com/bootstrap/javascript.html#tooltips
+[bootstrap-scrollspy]: http://twitter.github.com/bootstrap/javascript.html#scrollspy
