@@ -225,7 +225,7 @@ _可使用工具：[CSS Compressor] 并选择\[highest\]压缩_
 * 定制&统一 浏览器的滚动条样式：[jquery-scroll] & [Lionbars]
 * hover提示效果文字：[bootstrap-tooltips]
 * 滚动条跟随nav效果：[bootstrap-scrollspy]
-* 
+* 提示冒泡文字：[grumble.js]
 
 ### Newletter制作规范：
 * 整理排版中，待发
@@ -263,3 +263,4 @@ _可使用工具：[CSS Compressor] 并选择\[highest\]压缩_
 [Lionbars]: ##
 [bootstrap-tooltips]: http://twitter.github.com/bootstrap/javascript.html#tooltips
 [bootstrap-scrollspy]: http://twitter.github.com/bootstrap/javascript.html#scrollspy
+[grumble.js]:https://github.com/jamescryer/grumble.js
