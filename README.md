@@ -1,6 +1,6 @@
 # GeekPark 前端代码规范  
-![GeekPark](http://www.geekpark.net/public/css/images/logo.png)
-![ITvalue](http://2009.itvalue.com.cn/mod/iv/views/default/css/images/logo.gif)
+![GeekPark](http://www.geekpark.net/public/img/icons/white-logo.jpg)
+![BusinessValue](http://businessvalue.com.cn/css/images/logo.gif)
 
 这里是 [GeekPark] & [ITvalue] 前端开发团队遵循和约定的代码书写规范，意在提高代码的规范性和可维护性。
 
